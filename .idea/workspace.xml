@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64fafa70-893b-4710-b5f1-8da80b63c251" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/js/testtda2/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/testtda2/app/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/app/script/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/testtda2/app/script/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/app/script/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/testtda2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-346766879">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.103" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="2" />
+          <entry key="html" value="8" />
+          <entry key="js" value="6" />
+          <entry key="json" value="2" />
+          <entry key="md" value="2" />
+          <entry key="py" value="45" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="8" />
+          <entry key="JSON" value="2" />
+          <entry key="JavaScript" value="6" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Python" value="45" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="170" />
+          <entry key="dummy" value="9" />
+          <entry key="gitignore" value="38" />
+          <entry key="html" value="165" />
+          <entry key="js" value="498" />
+          <entry key="md" value="12" />
+          <entry key="py" value="15446" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="165" />
+          <entry key="JavaScript" value="498" />
+          <entry key="Markdown" value="12" />
+          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="Python" value="15616" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.49100497">
+      <split-first>
+        <splitter split-orientation="horizontal" split-proportion="0.5150265">
+          <split-first>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/spec/space.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="1138">
+                      <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+                      <folding>
+                        <marker date="1546915315376" expanded="true" signature="146:452" ph="..." />
+                        <marker date="1546915315376" expanded="true" signature="1930:2579" ph="..." />
+                        <marker date="1546915315376" expanded="true" signature="2626:2678" ph="..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/kmtest.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="550">
+                      <caret line="25" selection-start-line="25" selection-end-line="25" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <splitter split-orientation="vertical" split-proportion="0.572593">
+              <split-first>
+                <leaf>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/src/diagram.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="842">
+                          <caret line="123" selection-start-line="123" selection-end-line="123" />
+                          <folding>
+                            <element signature="e#5900#7643#0" />
+                            <marker date="1546915183658" expanded="true" signature="999:1097" ph="..." />
+                            <marker date="1546915183658" expanded="true" signature="1092:1097" ph="..." />
+                            <marker date="1546915183658" expanded="true" signature="1220:1393" ph="..." />
+                            <marker date="1546915183658" expanded="true" signature="1429:1697" ph="..." />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/js/testtda2/app/script/src/index.js">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="389">
+                          <caret line="127" selection-start-line="127" selection-end-line="127" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-first>
+              <split-second>
+                <leaf>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/src/inner.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="463">
+                          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+                          <folding>
+                            <marker date="1546915183590" expanded="true" signature="508:715" ph="..." />
+                            <marker date="1546915183590" expanded="true" signature="819:853" ph="..." />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-second>
+            </splitter>
+          </split-second>
+        </splitter>
+      </split-first>
+      <split-second>
+        <splitter split-orientation="horizontal" split-proportion="0.5181818">
+          <split-first>
+            <splitter split-orientation="vertical" split-proportion="0.48395312">
+              <split-first>
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/src/flow.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="608">
+                          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+                          <folding>
+                            <marker date="1546915315332" expanded="true" signature="622:708" ph="..." />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/.gitignore">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="132">
+                          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/test1.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="550">
+                          <caret line="32" selection-start-line="32" selection-end-line="32" />
+                          <folding>
+                            <marker date="1546915745558" expanded="true" signature="201:202" ph="..." />
+                            <marker date="1546915745558" expanded="true" signature="451:608" ph="..." />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                  <file pinned="false" current-in-tab="false">
+                    <entry file="file://$PROJECT_DIR$/README.md">
+                      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                        <state split_layout="FIRST">
+                          <first_editor />
+                          <second_editor />
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-first>
+              <split-second>
+                <leaf>
+                  <file pinned="false" current-in-tab="true">
+                    <entry file="file://$PROJECT_DIR$/src/base.py">
+                      <provider selected="true" editor-type-id="text-editor">
+                        <state relative-caret-position="66">
+                          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+                          <folding>
+                            <element signature="e#334#357#0" />
+                            <element signature="e#401#418#0" />
+                            <element signature="e#463#481#0" />
+                            <marker date="1546913790857" expanded="true" signature="154:178" ph="..." />
+                            <marker date="1546913790857" expanded="true" signature="1066:1072" ph="..." />
+                            <marker date="1546913790857" expanded="true" signature="1195:1197" ph="..." />
+                          </folding>
+                        </state>
+                      </provider>
+                    </entry>
+                  </file>
+                </leaf>
+              </split-second>
+            </splitter>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/boundary.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="1731">
+                      <caret line="95" column="19" lean-forward="true" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
+                      <folding>
+                        <marker date="1546915081885" expanded="true" signature="1331:1365" ph="..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/space.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="794">
+                      <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+                      <folding>
+                        <element signature="e#1045#1204#0" />
+                        <element signature="e#1270#1734#0" />
+                        <element signature="e#1786#1950#0" />
+                        <element signature="e#2661#2930#0" />
+                        <element signature="e#2966#3220#0" />
+                        <element signature="e#3256#3636#0" />
+                        <marker date="1546912094760" expanded="true" signature="95:293" ph="..." />
+                        <marker date="1546912094760" expanded="true" signature="1147:1321" ph="..." />
+                        <marker date="1546912094760" expanded="true" signature="1317:1321" ph="..." />
+                        <marker date="1546912094760" expanded="true" signature="1888:2067" ph="..." />
+                        <marker date="1546912094760" expanded="true" signature="2675:2679" ph="..." />
+                        <marker date="1546912094760" expanded="true" signature="3201:3886" ph="..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/__init__.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="66">
+                      <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/samples/random_cubical_complex_persistence_example.py" />
+        <option value="$PROJECT_DIR$/cfg.py" />
+        <option value="$PROJECT_DIR$/kmtest.py" />
+        <option value="$PROJECT_DIR$/test1.py" />
+        <option value="$PROJECT_DIR$/js/vr1.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/js/ht1.html" />
+        <option value="$PROJECT_DIR$/js/testtda2/app/index.html" />
+        <option value="$PROJECT_DIR$/js/testtda2/app/script/src/index.js" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
+        <option value="$PROJECT_DIR$/src/space.py" />
+        <option value="$PROJECT_DIR$/src/base.py" />
+        <option value="$PROJECT_DIR$/src/boundary.py" />
+        <option value="$PROJECT_DIR$/src/diagram.py" />
+        <option value="$PROJECT_DIR$/src/inner.py" />
+        <option value="$PROJECT_DIR$/spec/space.py" />
+        <option value="$PROJECT_DIR$/src/flow.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/js/node_modules" />
+    <handled-path value="$PROJECT_DIR$/js/testtda2/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/js/package.json" />
+      <path value="$PROJECT_DIR$/js/testtda2/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="4005" />
+    <option name="y" value="24" />
+    <option name="width" value="3522" />
+    <option name="height" value="2136" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tda1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tda1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tda1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tda1" type="462c0819:PsiDirectoryNode" />
+              <item name="Untitled Folder" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64fafa70-893b-4710-b5f1-8da80b63c251" name="Default Changelist" comment="" />
+      <created>1546220841343</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546220841343</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="4005" y="24" width="3522" height="2136" extended-state="4" />
+    <layout>
+      <window_info active="true" content_ui="combo" x="2525" y="1006" width="425" height="957" id="Project" order="0" type="FLOATING" visible="true" weight="0.24980205" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959756" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" x="720" y="63" width="1120" height="406" id="Python Console" order="11" type="FLOATING" weight="0.32960325" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/samples/periodic_cubical_complex_barcode_persistence_from_perseus_file_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/random_cubical_complex_persistence_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/cfg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/simplex_tree_example.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/rips_persistence_diagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/kmapper/kmapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+          <folding>
+            <element signature="e#2964#4626#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/pandas/core/accessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1261">
+          <caret line="7331" column="25" selection-start-line="7331" selection-start-column="11" selection-end-line="7331" selection-end-column="25" />
+          <folding>
+            <element signature="e#11634#15790#0" />
+            <element signature="e#49318#53173#0" />
+            <element signature="e#53264#56652#0" />
+            <element signature="e#57036#59624#0" />
+            <element signature="e#60208#62000#0" />
+            <element signature="e#67254#67860#0" />
+            <element signature="e#68114#72504#0" />
+            <element signature="e#75433#76415#0" />
+            <element signature="e#76966#79374#0" />
+            <element signature="e#79493#88883#0" />
+            <element signature="e#88945#92145#0" />
+            <element signature="e#92197#94962#0" />
+            <element signature="e#95191#95508#0" />
+            <element signature="e#95584#96081#0" />
+            <element signature="e#96257#96934#0" />
+            <element signature="e#96999#97551#0" />
+            <element signature="e#98546#99090#0" />
+            <element signature="e#99174#101606#0" />
+            <element signature="e#101648#102505#0" />
+            <element signature="e#102551#102896#0" />
+            <element signature="e#103017#104185#0" />
+            <element signature="e#104235#105874#0" />
+            <element signature="e#105919#106080#0" />
+            <element signature="e#106142#109640#0" />
+            <element signature="e#109701#112808#0" />
+            <element signature="e#112875#117520#0" />
+            <element signature="e#117575#117800#0" />
+            <element signature="e#118789#119738#0" />
+            <element signature="e#120502#121153#0" />
+            <element signature="e#126138#130130#0" />
+            <element signature="e#130177#130379#0" />
+            <element signature="e#130435#132070#0" />
+            <element signature="e#132297#132745#0" />
+            <element signature="e#132887#133303#0" />
+            <element signature="e#133449#133881#0" />
+            <element signature="e#133945#134814#0" />
+            <element signature="e#135062#135473#0" />
+            <element signature="e#135967#136307#0" />
+            <element signature="e#136514#136758#0" />
+            <element signature="e#136891#141130#0" />
+            <element signature="e#145096#149015#0" />
+            <element signature="e#149137#157745#0" />
+            <element signature="e#158474#163475#0" />
+            <element signature="e#163558#164637#0" />
+            <element signature="e#164700#166595#0" />
+            <element signature="e#166889#168555#0" />
+            <element signature="e#168812#171152#0" />
+            <element signature="e#171274#172307#0" />
+            <element signature="e#172367#175331#0" />
+            <element signature="e#175392#176440#0" />
+            <element signature="e#176495#177215#0" />
+            <element signature="e#177270#178144#0" />
+            <element signature="e#178343#179754#0" />
+            <element signature="e#179825#180152#0" />
+            <element signature="e#180240#180576#0" />
+            <element signature="e#180660#180857#0" />
+            <element signature="e#180919#181866#0" />
+            <element signature="e#181945#185360#0" />
+            <element signature="e#185406#186740#0" />
+            <element signature="e#186863#191402#0" />
+            <element signature="e#191571#195228#0" />
+            <element signature="e#195264#199318#0" />
+            <element signature="e#199580#199887#0" />
+            <element signature="e#199941#205928#0" />
+            <element signature="e#205988#207824#0" />
+            <element signature="e#207854#210562#0" />
+            <element signature="e#210859#211069#0" />
+            <element signature="e#211075#211147#0" />
+            <element signature="e#211222#213642#0" />
+            <element signature="e#213977#214497#0" />
+            <element signature="e#214521#216231#0" />
+            <element signature="e#216975#223292#0" />
+            <element signature="e#223332#224828#0" />
+            <element signature="e#225047#229652#0" />
+            <element signature="e#229759#234182#0" />
+            <element signature="e#234305#235709#0" />
+            <element signature="e#236014#236335#0" />
+            <element signature="e#236395#239448#0" />
+            <element signature="e#239621#241597#0" />
+            <element signature="e#241644#246182#0" />
+            <element signature="e#246243#247623#0" />
+            <element signature="e#247805#251064#0" />
+            <element signature="e#251137#252514#0" />
+            <element signature="e#252639#256843#0" />
+            <element signature="e#261340#264548#0" />
+            <element signature="e#264629#265774#0" />
+            <element signature="e#265839#266825#0" />
+            <element signature="e#266863#269778#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vr1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-937750404/zlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ht1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/testtda2/app/script/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/testtda2/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="418">
+            <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/testtda2/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-937750404/gudhi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="1366" column="56" selection-start-line="1366" selection-start-column="56" selection-end-line="1366" selection-end-column="56" />
+          <folding>
+            <element signature="e#160#1042#1" expanded="true" />
+            <element signature="e#11921#24097#0" />
+            <element signature="e#12716#13007#1" expanded="true" />
+            <element signature="e#13126#13425#1" expanded="true" />
+            <element signature="e#13526#13699#1" expanded="true" />
+            <element signature="e#13951#14263#1" expanded="true" />
+            <element signature="e#14363#14479#1" expanded="true" />
+            <element signature="e#14720#14947#1" expanded="true" />
+            <element signature="e#15472#15727#1" expanded="true" />
+            <element signature="e#15832#16160#1" expanded="true" />
+            <element signature="e#16266#16519#1" expanded="true" />
+            <element signature="e#17351#17658#0" />
+            <element signature="e#17351#17645#1" expanded="true" />
+            <element signature="e#17915#18155#1" expanded="true" />
+            <element signature="e#18264#18451#1" expanded="true" />
+            <element signature="e#22324#22506#1" expanded="true" />
+            <element signature="e#22598#22816#1" expanded="true" />
+            <element signature="e#23293#23443#1" expanded="true" />
+            <element signature="e#24134#28873#0" />
+            <element signature="e#28925#30729#0" />
+            <element signature="e#30775#32579#0" />
+            <element signature="e#32624#37541#0" />
+            <element signature="e#37944#38229#1" expanded="true" />
+            <element signature="e#40385#40774#1" expanded="true" />
+            <element signature="e#41569#42332#1" expanded="true" />
+            <element signature="e#42423#42842#0" />
+            <element signature="e#42423#42829#1" expanded="true" />
+            <element signature="e#44046#44318#1" expanded="true" />
+            <element signature="e#44411#44789#1" expanded="true" />
+            <element signature="e#48570#49305#1" expanded="true" />
+            <element signature="e#56639#58037#0" />
+            <element signature="e#58077#61360#0" />
+            <element signature="e#61397#62781#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/testtda2/app/script/vendors/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/testtda2/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/testtda2/app/script/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/space.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#1045#1204#0" />
+            <element signature="e#1270#1734#0" />
+            <element signature="e#1786#1950#0" />
+            <element signature="e#2661#2930#0" />
+            <element signature="e#2966#3220#0" />
+            <element signature="e#3256#3636#0" />
+            <marker date="1546912094760" expanded="true" signature="95:293" ph="..." />
+            <marker date="1546912094760" expanded="true" signature="1147:1321" ph="..." />
+            <marker date="1546912094760" expanded="true" signature="1317:1321" ph="..." />
+            <marker date="1546912094760" expanded="true" signature="1888:2067" ph="..." />
+            <marker date="1546912094760" expanded="true" signature="2675:2679" ph="..." />
+            <marker date="1546912094760" expanded="true" signature="3201:3886" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding>
+            <element signature="e#334#357#0" />
+            <element signature="e#401#418#0" />
+            <element signature="e#463#481#0" />
+            <marker date="1546913790857" expanded="true" signature="154:178" ph="..." />
+            <marker date="1546913790857" expanded="true" signature="1066:1072" ph="..." />
+            <marker date="1546913790857" expanded="true" signature="1195:1197" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/boundary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1731">
+          <caret line="95" column="19" lean-forward="true" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="19" />
+          <folding>
+            <marker date="1546915081885" expanded="true" signature="1331:1365" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/diagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#5900#7643#0" />
+            <marker date="1546915183658" expanded="true" signature="999:1097" ph="..." />
+            <marker date="1546915183658" expanded="true" signature="1092:1097" ph="..." />
+            <marker date="1546915183658" expanded="true" signature="1220:1393" ph="..." />
+            <marker date="1546915183658" expanded="true" signature="1429:1697" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/inner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <marker date="1546915183590" expanded="true" signature="508:715" ph="..." />
+            <marker date="1546915183590" expanded="true" signature="819:853" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding>
+            <marker date="1546915315332" expanded="true" signature="622:708" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <marker date="1546915745558" expanded="true" signature="201:202" ph="..." />
+            <marker date="1546915745558" expanded="true" signature="451:608" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/space.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1138">
+          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+          <folding>
+            <marker date="1546915315376" expanded="true" signature="146:452" ph="..." />
+            <marker date="1546915315376" expanded="true" signature="1930:2579" ph="..." />
+            <marker date="1546915315376" expanded="true" signature="2626:2678" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make_circles_keplermapper_output.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kmtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
