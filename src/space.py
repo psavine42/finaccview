@@ -1,4 +1,4 @@
-from .diagram import *
+from .cell import *
 import networkx as nx
 from .flow import FlowNode
 
@@ -109,19 +109,27 @@ class LSpace(object):
     def boundary_graph(self):
         G = nx.DiGraph()
         for name, cell in self._cells.items():
-            for bnd in cell.boundaries:
-                G.add_node(bnd.name, ntype='boundary')
+            els = list(cell._inners.values()) + cell.boundaries
+            for bnd in els:
+                if bnd is None:
+                    continue
+                G.add_node(str(bnd), ntype='boundary')
+                if name == 'world' and isinstance(bnd, Boundary):
+                    G.add_edge('world', str(bnd))
                 for nxt in bnd.successors:
-                    G.add_edge(bnd.name, nxt.name)
+                    if nxt is not None:
+                        G.add_edge(str(bnd), str(nxt))
         return G
 
     def cell_graph(self):
         G = nx.DiGraph()
         for name, cell in self._cells.items():
-            G.add_node(name, ntype='cell')
+            G.add_node(name)
             for bnd in cell.boundaries:
-                for nxt in bnd.next_states:
-                    G.add_edge(name, nxt.name)
+                if bnd.to_.name == name:
+                    G.add_edge(bnd.from_.name, name)
+                else:
+                    G.add_edge(name, bnd.to_.name)
         return G
 
     def full_graph(self):

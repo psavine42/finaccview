@@ -23,6 +23,10 @@ class FlowNode(object):
             yield c
 
     @property
+    def parent(self):
+        return self._parent
+
+    @property
     def location(self):
         return self._state
 

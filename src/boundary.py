@@ -30,6 +30,10 @@ class Boundary(SpaceNode):
         return self._to
 
     @property
+    def members_dict(self):
+        return self._successors
+
+    @property
     def name(self):
         """ name is something like (sign is
             [cell1]--(+)-->[cell2]
@@ -48,6 +52,9 @@ class Boundary(SpaceNode):
     def __getitem__(self, item):
         """ lookup connected boundaries """
         return self._successors.get(item, None)
+
+    def __contains__(self, item):
+        return item in self._successors
 
     def __iter__(self):
         pass

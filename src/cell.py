@@ -39,6 +39,10 @@ class LCell(SpaceNode):
         return '<{}>:{}'.format(self.__class__.__name__, self.name)
 
     @property
+    def members_dict(self):
+        return {**self._inners, **self._boundaries}
+
+    @property
     def boundaries(self):
         return list(self._boundaries.values())
 
@@ -82,7 +86,7 @@ class LCell(SpaceNode):
             return bound
 
         elif len(args) == 2:
-            # connect 2 boundaries from cell
+            # connect 2 boundaries from cell with an inner node
             # cell_from--[b1]--self--[b2]--cell_to
             # -> [b1]--[balance]--[b2]
             cell_from, cell_to = args
@@ -107,8 +111,8 @@ class LCell(SpaceNode):
 
             if bound_from and bound_to:
                 b = Inner(self, bound_from, bound_to)
+                self._inners[b.name] = b
                 bound_from.add_successor(b)
-                # self._balances.append(b)
                 return b
             print('missing item ')
             return
@@ -125,7 +129,6 @@ class LCell(SpaceNode):
 class World(LCell):
     def __init__(self, space):
         LCell.__init__(self, 'world', space=space)
-        self._inners['default'] = Inner(self, None)
 
     @property
     def successors(self):

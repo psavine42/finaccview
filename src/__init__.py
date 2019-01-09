@@ -1,6 +1,6 @@
 from . import base
 from . import flow
-from . import diagram
+from . import cell
 from . import inner
 from . import boundary
 
