@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64fafa70-893b-4710-b5f1-8da80b63c251" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/geom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/voronoie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/testtda2/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/testtda2/app/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/app/script/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/testtda2/app/script/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/app/script/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/testtda2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/testtda2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/space.py" beforeDir="false" afterPath="$PROJECT_DIR$/spec/space.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/boundary.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/boundary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/flow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inner.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/space.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/space.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visual.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/visual.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +34,7 @@
           <entry key="js" value="6" />
           <entry key="json" value="2" />
           <entry key="md" value="2" />
-          <entry key="py" value="51" />
+          <entry key="py" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -50,18 +44,18 @@
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="51" />
+          <entry key="Python" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="170" />
-          <entry key="dummy" value="13" />
+          <entry key="dummy" value="15" />
           <entry key="gitignore" value="38" />
           <entry key="html" value="165" />
           <entry key="js" value="498" />
           <entry key="md" value="12" />
-          <entry key="py" value="17404" />
+          <entry key="py" value="20845" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -69,141 +63,176 @@
           <entry key="HTML" value="165" />
           <entry key="JavaScript" value="498" />
           <entry key="Markdown" value="12" />
-          <entry key="PLAIN_TEXT" value="51" />
-          <entry key="Python" value="17574" />
+          <entry key="PLAIN_TEXT" value="53" />
+          <entry key="Python" value="21015" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6725251">
+    <splitter split-orientation="horizontal" split-proportion="0.4799253">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.2886873">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/spec/space.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="456">
-                      <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-                      <folding>
-                        <element signature="e#453#1144#0" />
-                        <marker date="1546997652632" expanded="true" signature="786:1060" ph="..." />
-                        <marker date="1546997652632" expanded="true" signature="3963:4168" ph="..." />
-                        <marker date="1546997652632" expanded="true" signature="4198:4881" ph="..." />
-                        <marker date="1546997652632" expanded="true" signature="4928:4980" ph="..." />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/networkx/algorithms/planarity.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="22">
-                      <caret line="490" column="6" lean-forward="true" selection-start-line="490" selection-start-column="6" selection-end-line="490" selection-end-column="6" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/pydot.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="2315">
-                      <caret line="1361" column="43" lean-forward="true" selection-start-line="1361" selection-start-column="43" selection-end-line="1361" selection-end-column="43" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/networkx/drawing/nx_pydot.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="643">
-                      <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/space.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1564">
-                      <caret line="145" column="19" lean-forward="true" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
-                      <folding>
-                        <marker date="1546997534206" expanded="true" signature="92:290" ph="..." />
-                        <marker date="1546997534206" expanded="true" signature="1144:1318" ph="..." />
-                        <marker date="1546997534206" expanded="true" signature="1314:1318" ph="..." />
-                        <marker date="1546997534206" expanded="true" signature="1885:2064" ph="..." />
-                        <marker date="1546997534206" expanded="true" signature="2672:2676" ph="..." />
-                        <marker date="1546997534206" expanded="true" signature="3471:4218" ph="..." />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/visual.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="225">
-                      <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/cell.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1083">
-                      <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-                      <folding>
-                        <element signature="e#6040#6495#0" />
-                        <marker date="1546993626933" expanded="true" signature="1000:1192" ph="..." />
-                        <marker date="1546993626933" expanded="true" signature="1187:1192" ph="..." />
-                        <marker date="1546993626933" expanded="true" signature="1315:1488" ph="..." />
-                        <marker date="1546993626933" expanded="true" signature="1524:1792" ph="..." />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/js/testtda2/app/script/src/index.js">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="389">
-                      <caret line="127" selection-start-line="127" selection-end-line="127" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/boundary.py">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/visual.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="16" column="41" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="41" />
+                <state relative-caret-position="1108">
+                  <caret line="99" column="55" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
                   <folding>
-                    <marker date="1546993626845" expanded="true" signature="627:665" ph="..." />
-                    <marker date="1546993626845" expanded="true" signature="1251:1297" ph="..." />
-                    <marker date="1546993626845" expanded="true" signature="1481:1515" ph="..." />
+                    <element signature="e#1031#1090#0" />
+                    <element signature="e#1111#1951#1" expanded="true" />
+                    <marker date="1547089414310" expanded="true" signature="62:63" ph="..." />
+                    <marker date="1547089414310" expanded="true" signature="964:1031" ph="..." />
+                    <marker date="1547089414310" expanded="true" signature="1079:1621" ph="..." />
+                    <marker date="1547089414310" expanded="true" signature="3058:3063" ph="..." />
+                    <marker date="1547089414310" expanded="true" signature="3126:3220" ph="..." />
+                    <marker date="1547089414310" expanded="true" signature="3206:3220" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/voronoie.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="698">
+                  <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+                  <folding>
+                    <element signature="e#1426#2826#0" />
+                    <element signature="e#4702#4706#0" />
+                    <element signature="e#4747#4751#0" />
+                    <element signature="e#4797#4801#0" />
+                    <element signature="e#4991#5254#0" />
+                    <element signature="e#5293#5548#0" />
+                    <element signature="e#5587#5906#0" />
+                    <element signature="e#5975#6442#0" />
+                    <element signature="e#6511#7422#0" />
+                    <element signature="e#7536#7596#1" expanded="true" />
+                    <element signature="e#7587#13634#0" />
+                    <element signature="e#7638#13524#0" />
+                    <element signature="e#8006#13355#0" />
+                    <element signature="e#13979#15029#0" />
+                    <element signature="e#14214#14273#0" />
+                    <element signature="e#14716#14737#0" />
+                    <element signature="e#14313#14547#0" />
+                    <element signature="e#14586#14656#0" />
+                    <element signature="e#14695#14764#0" />
+                    <element signature="e#14803#14867#0" />
+                    <element signature="e#14906#14971#0" />
+                    <element signature="e#15012#15107#0" />
+                    <element signature="e#15779#17925#0" />
+                    <element signature="e#15304#15446#0" />
+                    <element signature="e#15880#15975#0" />
+                    <element signature="e#15659#15772#0" />
+                    <element signature="e#15824#16799#0" />
+                    <element signature="e#16818#20645#0" />
+                    <element signature="e#16797#17143#0" />
+                    <element signature="e#17676#17954#0" />
+                    <element signature="e#17997#18172#0" />
+                    <element signature="e#18216#18391#0" />
+                    <element signature="e#18488#19733#0" />
+                    <element signature="e#19874#20726#0" />
+                    <element signature="e#20360#22678#0" />
+                    <element signature="e#22843#24555#0" />
+                    <element signature="e#24576#26084#0" />
+                    <element signature="e#25309#25581#0" />
+                    <element signature="e#26737#27367#1" expanded="true" />
+                    <element signature="e#27632#27955#0" />
+                    <element signature="e#27632#27808#1" expanded="true" />
+                    <marker date="1547162983595" expanded="true" signature="4371:4838" ph="..." />
+                    <marker date="1547162983595" expanded="true" signature="5648:5685" ph="..." />
+                    <marker date="1547162983595" expanded="true" signature="15194:15230" ph="..." />
+                    <marker date="1547162983595" expanded="true" signature="15528:15613" ph="..." />
+                    <marker date="1547162983595" expanded="true" signature="15637:15928" ph="..." />
+                    <marker date="1547162983595" expanded="true" signature="15954:15963" ph="..." />
+                    <marker date="1547162983595" expanded="true" signature="16758:17174" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/__init__.py">
+            <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/pydot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="66">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
+                <state relative-caret-position="2315">
+                  <caret line="1361" column="43" selection-start-line="1361" selection-start-column="43" selection-end-line="1361" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/networkx/drawing/nx_pydot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="643">
+                  <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/spec/space.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1688">
+                  <caret line="161" selection-start-line="161" selection-end-line="164" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/spec/geom.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="770">
+                  <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+                  <folding>
+                    <marker date="1547162983531" expanded="true" signature="856:1211" ph="..." />
+                    <marker date="1547162983531" expanded="true" signature="1244:1530" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/space.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="948">
+                  <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+                  <folding>
+                    <marker date="1546997534206" expanded="true" signature="92:290" ph="..." />
+                    <marker date="1546997534206" expanded="true" signature="1144:1318" ph="..." />
+                    <marker date="1546997534206" expanded="true" signature="1314:1318" ph="..." />
+                    <marker date="1546997534206" expanded="true" signature="1885:2064" ph="..." />
+                    <marker date="1546997534206" expanded="true" signature="2672:2676" ph="..." />
+                    <marker date="1546997534206" expanded="true" signature="3471:4218" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/cell.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1083">
+                  <caret line="62" column="31" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#6040#6495#0" />
+                    <marker date="1546993626933" expanded="true" signature="1000:1192" ph="..." />
+                    <marker date="1546993626933" expanded="true" signature="1187:1192" ph="..." />
+                    <marker date="1546993626933" expanded="true" signature="1315:1488" ph="..." />
+                    <marker date="1546993626933" expanded="true" signature="1524:1792" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/testtda2/app/script/src/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="389">
+                  <caret line="127" selection-start-line="127" selection-end-line="127" />
                 </state>
               </provider>
             </entry>
@@ -248,6 +277,8 @@
         <option value="$PROJECT_DIR$/src/space.py" />
         <option value="$PROJECT_DIR$/spec/space.py" />
         <option value="$PROJECT_DIR$/src/visual.py" />
+        <option value="$PROJECT_DIR$/spec/geom.py" />
+        <option value="$PROJECT_DIR$/src/voronoie.py" />
       </list>
     </option>
   </component>
@@ -268,12 +299,14 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="1481" />
-    <option name="y" value="27" />
-    <option name="width" value="2852" />
-    <option name="height" value="2133" />
+    <option name="x" value="3924" />
+    <option name="y" value="24" />
+    <option name="width" value="2206" />
+    <option name="height" value="2136" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -342,10 +375,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1481" y="27" width="2852" height="2133" extended-state="4" />
+    <frame x="3924" y="24" width="2206" height="2136" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="362" y="1628" width="425" height="531" id="Project" order="0" type="FLOATING" visible="true" weight="0.24980205" />
+      <window_info content_ui="combo" x="3348" y="109" width="425" height="1434" id="Project" order="0" type="FLOATING" visible="true" weight="0.24980205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -624,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -677,14 +703,7 @@
     <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/pydot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2315">
-          <caret line="1361" column="43" lean-forward="true" selection-start-line="1361" selection-start-column="43" selection-end-line="1361" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/networkx/algorithms/planarity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="490" column="6" lean-forward="true" selection-start-line="490" selection-start-column="6" selection-end-line="490" selection-end-column="6" />
+          <caret line="1361" column="43" selection-start-line="1361" selection-start-column="43" selection-end-line="1361" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -702,24 +721,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/space.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-          <folding>
-            <element signature="e#453#1144#0" />
-            <marker date="1546997652632" expanded="true" signature="786:1060" ph="..." />
-            <marker date="1546997652632" expanded="true" signature="3963:4168" ph="..." />
-            <marker date="1546997652632" expanded="true" signature="4198:4881" ph="..." />
-            <marker date="1546997652632" expanded="true" signature="4928:4980" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/space.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="145" column="19" lean-forward="true" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
+        <state relative-caret-position="948">
+          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
           <folding>
             <marker date="1546997534206" expanded="true" signature="92:290" ph="..." />
             <marker date="1546997534206" expanded="true" signature="1144:1318" ph="..." />
@@ -782,10 +787,133 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/scipy/spatial/_plotutils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="951">
+          <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-937750404/scipy/spatial/qhull.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="163" column="59" lean-forward="true" selection-start-line="163" selection-start-column="59" selection-end-line="163" selection-end-column="59" />
+          <folding>
+            <element signature="e#3772#4893#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/pyvoro/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/tda/lib/python3.6/site-packages/networkx/algorithms/planarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="490" column="6" selection-start-line="490" selection-start-column="6" selection-end-line="490" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/visual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="1108">
+          <caret line="99" column="55" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
+          <folding>
+            <element signature="e#1031#1090#0" />
+            <element signature="e#1111#1951#1" expanded="true" />
+            <marker date="1547089414310" expanded="true" signature="62:63" ph="..." />
+            <marker date="1547089414310" expanded="true" signature="964:1031" ph="..." />
+            <marker date="1547089414310" expanded="true" signature="1079:1621" ph="..." />
+            <marker date="1547089414310" expanded="true" signature="3058:3063" ph="..." />
+            <marker date="1547089414310" expanded="true" signature="3126:3220" ph="..." />
+            <marker date="1547089414310" expanded="true" signature="3206:3220" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/space.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1688">
+          <caret line="161" selection-start-line="161" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/geom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <marker date="1547162983531" expanded="true" signature="856:1211" ph="..." />
+            <marker date="1547162983531" expanded="true" signature="1244:1530" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/voronoie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+          <folding>
+            <element signature="e#1426#2826#0" />
+            <element signature="e#4702#4706#0" />
+            <element signature="e#4747#4751#0" />
+            <element signature="e#4797#4801#0" />
+            <element signature="e#4991#5254#0" />
+            <element signature="e#5293#5548#0" />
+            <element signature="e#5587#5906#0" />
+            <element signature="e#5975#6442#0" />
+            <element signature="e#6511#7422#0" />
+            <element signature="e#7536#7596#1" expanded="true" />
+            <element signature="e#7587#13634#0" />
+            <element signature="e#7638#13524#0" />
+            <element signature="e#8006#13355#0" />
+            <element signature="e#13979#15029#0" />
+            <element signature="e#14214#14273#0" />
+            <element signature="e#14716#14737#0" />
+            <element signature="e#14313#14547#0" />
+            <element signature="e#14586#14656#0" />
+            <element signature="e#14695#14764#0" />
+            <element signature="e#14803#14867#0" />
+            <element signature="e#14906#14971#0" />
+            <element signature="e#15012#15107#0" />
+            <element signature="e#15779#17925#0" />
+            <element signature="e#15304#15446#0" />
+            <element signature="e#15880#15975#0" />
+            <element signature="e#15659#15772#0" />
+            <element signature="e#15824#16799#0" />
+            <element signature="e#16818#20645#0" />
+            <element signature="e#16797#17143#0" />
+            <element signature="e#17676#17954#0" />
+            <element signature="e#17997#18172#0" />
+            <element signature="e#18216#18391#0" />
+            <element signature="e#18488#19733#0" />
+            <element signature="e#19874#20726#0" />
+            <element signature="e#20360#22678#0" />
+            <element signature="e#22843#24555#0" />
+            <element signature="e#24576#26084#0" />
+            <element signature="e#25309#25581#0" />
+            <element signature="e#26737#27367#1" expanded="true" />
+            <element signature="e#27632#27955#0" />
+            <element signature="e#27632#27808#1" expanded="true" />
+            <marker date="1547162983595" expanded="true" signature="4371:4838" ph="..." />
+            <marker date="1547162983595" expanded="true" signature="5648:5685" ph="..." />
+            <marker date="1547162983595" expanded="true" signature="15194:15230" ph="..." />
+            <marker date="1547162983595" expanded="true" signature="15528:15613" ph="..." />
+            <marker date="1547162983595" expanded="true" signature="15637:15928" ph="..." />
+            <marker date="1547162983595" expanded="true" signature="15954:15963" ph="..." />
+            <marker date="1547162983595" expanded="true" signature="16758:17174" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
