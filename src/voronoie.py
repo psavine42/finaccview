@@ -112,11 +112,12 @@ BIG_FLOAT = 1e38
 
 def cmp(a, b):
     """ python 3 compatibility """
-    if a is None and b is None:
-        return 0
-    elif hasattr(a, '__cmp__') and hasattr(b, '__cmp__'):
+    # if a is None and b is None:
+    #    return 0
+    if hasattr(a, '__cmp__') and hasattr(b, '__cmp__'):
         return a.__cmp__(b)
-    return (a > b) - (a < b)
+    # print(a, b)
+    # return (a > b) - (a < b)
 
 
 # ------------------------------------------------------------------
@@ -136,10 +137,10 @@ def ccw_sort(p):
 
 # ------------------------------------------------------------------
 class Context(object):
-    def __init__(self, inputs=[]):
+    def __init__(self, inputs=[], debug=False, pr=False):
         self._input_pts = inputs
-        self.doPrint = 0
-        self.debug = 0
+        self.doPrint = pr
+        self.debug = debug
         self.plot = 0
         self.triangulate = False
         self.vertices = []  # list of vertex 2-tuples: (x,y)
@@ -407,9 +408,12 @@ class Site(object):
         else:
             return 0
 
+    def __eq__(self, other):
+        return 1 if self.__cmp__(other) == 0 else 0
+
     def __le__(self, other):
         r = self.__cmp__(other)
-        return True if r in [0, -1] else False
+        return 1 if r in [0, -1] else 0
 
     def __ge__(self, other):
         r = self.__cmp__(other)
@@ -436,10 +440,10 @@ class Edge(object):
     EDGE_NUM = 0
     DELETED = {}  # marker value
 
-    def __init__(self):
-        self.a = 0.0
-        self.b = 0.0
-        self.c = 0.0
+    def __init__(self, a=0.0, b=0.0, c=0.0):
+        self.a = a
+        self.b = b
+        self.c = c
         self.ep = [None, None]
         self.reg = [None, None]
         self.edgenum = 0
@@ -454,6 +458,9 @@ class Edge(object):
         if self.ep[Edge.RE - lrFlag] is None:
             return False
         return True
+
+    # @classmethod
+    # def from_points(cls, p1, p2):
 
     def intersect(self, other):
         if other is None:
@@ -634,7 +641,8 @@ class Halfedge(object):
 # ------------------------------------------------------------------
 class EdgeList(object):
     def __init__(self, xmin, xmax, nsites):
-        if xmin > xmax: xmin, xmax = xmax, xmin
+        if xmin > xmax:
+            xmin, xmax = xmax, xmin
         self.hashsize = int(2 * math.sqrt(nsites + 4))
 
         self.xmin = xmin
@@ -841,7 +849,7 @@ class SiteList(object):
 
 
 # ------------------------------------------------------------------
-def computeVoronoiDiagram(points, ctx=False):
+def VoronoiDiagram(points, ctx=False, **kwargs):
     """ Takes a list of point objects (which must have x and y fields).
         Returns a 3-tuple of:
 
@@ -854,8 +862,9 @@ def computeVoronoiDiagram(points, ctx=False):
                the indices of the vertices at the end of the edge.  If
                v1 or v2 is -1, the line extends to infinity.
     """
+
     site_list = SiteList(points)
-    context = Context(points)
+    context = Context(points, **kwargs)
     voronoi(site_list, context)
     if ctx is True:
         return context

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/tda1.iml" filepath="$PROJECT_DIR$/.idea/tda1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../viper/.idea/viper.iml" filepath="$PROJECT_DIR$/../viper/.idea/viper.iml" />
     </modules>
   </component>
 </project>
