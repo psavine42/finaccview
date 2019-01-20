@@ -1,7 +1,8 @@
 import numpy as np
+from abc import ABC, abstractmethod, abstractproperty
 
 
-class DiscreteSpace(object):
+class DiscreteSpace(ABC):
     """
     Abstract class for spaces.
     -spaces should:
@@ -20,14 +21,17 @@ class DiscreteSpace(object):
     def __contains__(self, item):
         pass
 
+    @abstractmethod
     def metric(self, p1, p2):
         return
 
+    @abstractmethod
     def is_open(self, key):
         return
 
     @property
-    def is_filled(self):
+    @abstractmethod
+    def done(self):
         return
 
 
@@ -46,9 +50,15 @@ class BoundedSpace_Z2(DiscreteSpace):
     def __len__(self):
         return self._data.shape[0] * self._data.shape[1]
 
+    def is_open(self, key):
+        return self.__getitem__(key) == 0
+
     def metric(self, p1, p2):
-        """ euclidean - per paper """
-        return ((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2) ** 0.5
+        """ euclidean - per paper
+            # todo why not manhattan ????
+        """
+        return (((p1[0] - p2[0]) ** 2) +
+                ((p1[1] - p2[1]) ** 2)) ** 0.5
 
     def _norm_key(self, item):
         if isinstance(item, (list, tuple)):
@@ -75,18 +85,35 @@ class BoundedSpace_Z2(DiscreteSpace):
         if x is not None and y is not None:
             self._data[x, y] = value
 
-    def is_open(self, key):
-        return self.__setitem__(key, 0)
-
     @property
     def n_filled(self):
         return len(np.where(self._data == 0)[0])
 
     @property
-    def is_filled(self):
+    def done(self):
         return self.n_filled == 0
 
     @property
     def np(self):
         return self._data
+
+    def cutout(self, points):
+        """
+        x = [   [0, 0, 0]
+                [0, 0, 0]
+                [0, 0, 0] ]
+        clip([0,0], [3,1], True)
+        >> x
+         [   [1, 0, 0]
+             [1, 0, 0]
+             [1, 1, 0] ]
+        """
+        return
+
+
+class HeirachicalSpace(BoundedSpace_Z2):
+    def __init__(self, **kwargs):
+        BoundedSpace_Z2.__init__(self, **kwargs)
+        self._data = []
+
 

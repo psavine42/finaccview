@@ -1,14 +1,28 @@
 import unittest
 import numpy as np
+from PIL import Image
 import src.discrete as disc
+from src.discrete import utils as utils
+
+seed = np.random.seed(68)
 
 
 class TestDisc(unittest.TestCase):
     def setUp(self):
         self.domain = [[0., 0.], [0., 1.], [1., 1.], [1., 0.]]
-        self.inputs = [[0.25, 0.25], [0.5001, 0.5], [0.73, 0.23], [0.76, 0.76], [0.242, 0.7422]]
+        self.inputs = [[0.25, 0.25], [0.5, 0.5], [0.73, 0.23], [0.76, 0.76], [0.242, 0.7422]]
         self.weight = [0.4, 0.1, 0.2, 0.2, 0.2]
         self.weighted = [[x, y, w / 2] for (x, y), w in zip(self.inputs, self.weight)]
+        self.pts = [[0.25, 0.25],    # 0
+                    [0.5, 0.5],      # 1
+                    [0.73, 0.23],    # 2
+                    [0.25, 0.75],    # 3
+                    [0.66, 0.66],    # 4
+                    [0.76, 0.76],    # 5
+                    ]
+        self.adj = [[0, 1], [1, 2], [1, 4], [1, 3], [0, 3],
+                    [4, 5],
+                    ]
 
     def test_autom(self):
         init_loc = [1, 1]
@@ -31,15 +45,94 @@ class TestDisc(unittest.TestCase):
         assert space.is_filled is True
 
     def test_discrete1(self):
-        space = disc.BoundedSpace_Z2(x=100, y=100)
+        space = disc.BoundedSpace_Z2(x=50, y=50)
         vor = disc.DiscreteVoronoi(points=self.inputs,
-                                   space=space,
-                                   x=100, y=100)
+                                   space=space)
         # vor.create_voronoi()
+        for i, cell in enumerate(vor._cells):
+            assert cell.index == i + 1
+            print(cell)
+
+        vor.create_voronoi()
+        img = vor.to_image()
+        img.show()
+
+    def test_discrete2(self):
+        pts = np.random.rand(10, 2)
+        space = disc.BoundedSpace_Z2(x=100, y=100)
+        vor = disc.DiscreteVoronoi(
+            points=pts, space=space, verbose=True, stop=100, go=True,
+            save=2
+        )
+        for i, cell in enumerate(vor._cells):
+            assert cell.index == i
+            print(cell)
+        img = vor.to_image()
+        img = img.resize((600, 600), Image.ANTIALIAS)
+        img.show()
+        return vor
+
+    def test_discrete_w1(self):
+        pts = np.random.rand(10, 3)
+        space = disc.BoundedSpace_Z2(x=200, y=200)
+        vor = disc.DiscreteVoronoi(
+            points=pts, space=space, verbose=True, stop=100, go=True, bins=3
+        )
         for i, cell in enumerate(vor._cells):
             assert cell.index == i
             print(cell)
 
-        vor.create_voronoi(verbose=True, stop=100)
-        img = vor.to_image()
-        img.show()
+    def test_discrete_setup(self):
+        space = disc.BoundedSpace_Z2(x=100, y=100)
+        vor = disc.VoronoiDBC(
+            adj=self.adj, points=self.pts, space=space, verbose=True,
+            stop=100, go=False, bins=3, save=2
+        )
+        vor._init_cell_sites()
+        for site in vor.sites:
+            print(site.index, len(site))
+        vor.to_image(out='./out/init_test/t1.jpeg')
+
+    def test_discrete_sg1(self):
+        space = disc.BoundedSpace_Z2(x=100, y=100)
+        vor = disc.VoronoiDBC(
+            adj=self.adj, points=self.pts, space=space, verbose=True,
+            stop=100, go=True, bins=3, save=2
+        )
+
+        for k, edge in vor._edges.items():
+            print(k, len(edge))
+
+
+_inputs = [[0.25, 0.25], [0.25, 0.75], [0.75, 0.75], [0.75, 0.25]]
+
+
+class TestUtils(unittest.TestCase):
+    def test_centroid(self):
+        arr = np.asarray(_inputs)
+        cr = utils.centroid(arr)
+        assert np.allclose(cr, np.array([0.5, 0.5])), cr
+
+    def test_area(self):
+        arr = np.asarray(_inputs)
+        cr = utils.polygon_area(arr)
+        assert cr == 0.5 ** 2, cr
+
+    def test_breseham(self):
+        tests = [([25, 25], [25, 75]),
+                 ([1, 5], [5, 5]),
+                 ([1, 4], [4, 9]),
+                 ([0, 1], [4, 9]),
+                 ([1, 9], [4, 4])
+                 ]
+        for p1, p2 in tests:
+            m = utils.discretize_segment(p1, p2)
+            print(m)
+            assert p1 in m
+            assert p2 in m
+
+
+
+    def test_dists(self):
+        pass
+
