@@ -2,18 +2,13 @@ import numpy as np
 from copy import deepcopy
 
 
-class Automaton4(object):
-    _MOVES = [
-        [0, 1],   # up
-        [0, -1],  # down
-        [1, 0],   # right
-        [-1, 0],  # left
-    ]
+class Automaton(object):
+    _MOVES = []
 
     def __init__(self, pos, moves=None):
         self._pos = pos
-        # self._step_every = step_every
         self._matrix = None
+        # self._step_every = step_every
         self._moves = moves if moves else self._MOVES
 
     @property
@@ -56,3 +51,27 @@ class Automaton4(object):
 
     def __hash__(self):
         return tuple(self._pos).__hash__()
+
+
+class Automaton4(Automaton):
+    _MOVES = [
+        [0, 1],     # up
+        [0, -1],    # down
+        [1, 0],     # right
+        [-1, 0],    # left
+    ]
+
+    def __init__(self, pos, moves=None):
+        Automaton.__init__(self, pos, moves=moves)
+
+
+class Automaton8(Automaton):
+    _MOVES = [
+        [0, 1], [0, -1], [1, 0], [-1, 0],
+        [1, 1], [-1, -1], [1, -1], [-1, 1]
+    ]
+
+    def __init__(self, pos, moves=None):
+        Automaton.__init__(self, pos, moves=moves)
+
+

@@ -1,7 +1,5 @@
 import numpy as np
-from scipy import spatial
-# import pyvoro
-
+from .discrete import dvc_base as dvc
 
 
 notes = \
@@ -14,14 +12,13 @@ notes = \
         with the property that a point q(x, y) lies in the region V (p i ) 
             if and only if distance(p_i , q) < distance(p j , q) 
             for each p i , p j ∈ P with i 6 = j, is defined as the Voronoi tessellation
-    V (P) := {V (p 1 ), ...,V (p n )}. The denotation distance(p i , q) repre-
-    sents a specified distance function between the generator p i and
-    the point q. In general, a Voronoi tessellation is defined in an
-    unbounded space. 
-
+    V (P) := {V (p 1 ), ...,V (p n )}. 
+    
+    The denotation distance(p i , q) represents a specified distance function between the generator p i and
+    the point q. 
+    In general, a Voronoi tessellation is defined in an unbounded space. 
     Having a bounded space S, the set V ∩S (P) := {V (p 1 ) ∩ S, ...,V (p n ) ∩ S} 
     is called a bounded Voronoi tessellation
-
     """
 
 
@@ -38,19 +35,11 @@ def distance_aw(generator_point, weight, point):
 
 
 # -----------------------------------------
-def center_of_mass(point, voronoi):
-    return 0
-
-
-def area_size(xs):
-    return 1
-
-
-def adjust_weights_aw(w_i, a_i, a_desired):
+def _adjust_weights_aw(w_i, a_i, a_desired):
     return
 
 
-def adjust_weights_pw(w_i, a_i, a_desired):
+def _adjust_weights_pw(w_i, a_i, a_desired):
     assert a_desired != 0
     w_i = w_i * (1 + (a_desired - a_i) / a_desired)
     if w_i < 1:
@@ -58,13 +47,14 @@ def adjust_weights_pw(w_i, a_i, a_desired):
     return w_i
 
 
-def compute_voronoi_tesselation(points):
-    return spatial.Voronoi(points)
+def adjust_weights(weights, area, desired, add=True):
+    if add is True:
+        return _adjust_weights_aw(weights, area, desired)
+    else:
+        return _adjust_weights_pw(weights, area, desired)
 
 
-
-
-
+# -----------------------------------------
 def move_generators(points, weights, voronoi):
     """
     Algorithm 4 MoveGenerators() for AW Voronoi Treemaps
@@ -92,11 +82,11 @@ def move_generators(points, weights, voronoi):
             w_i = w_i · f actorWeight
     """
     for i in range(len(points)):
-        points[i] = center_of_mass(i, voronoi)
+        points[i] = voronoi[i].center_of_mass
 
     factor_weight = float('inf')
     for i in range(points):
-        for j in range(i, points):
+        for j in range(i+1, points):
             f = (points[i] - points[j]) ** 2 / (weights[i] + weights[j])
             if 0 < f < factor_weight:
                 factor_weight = f
@@ -106,20 +96,14 @@ def move_generators(points, weights, voronoi):
     return points, weights
 
 
-def init_vor(points, weights):
-    return spatial.Voronoi(points)
-
-
 def extract_subareas(voronoi):
+    for site in voronoi._cells:
+        # site.
+        return
     return voronoi
 
 
-def cells(i, voronoi):
-    """ getse the voronoi cells """
-    return
-
-
-def voronoi_treemap_subdiv(plane, desiried_areas, epsilon):
+def voronoi_treemap_subdiv(plane, points, desired_areas, epsilon=5, add=False):
     """
     Algorithm 1: Voronoi Treemap subdivision
 
@@ -155,28 +139,27 @@ def voronoi_treemap_subdiv(plane, desiried_areas, epsilon):
 
     ExtractSubareas(V_∩S (P,W ))
     """
-    # plane = S                             # S
-    # random points in bounded plane S
-    points =  []                           # P
-    weights = [1] * len(desiried_areas)     # W
-    voronoi = init_vor(points, weights)     # V
+    weights = [1] * len(desired_areas)     # W
+    voronoi = dvc.VoronoiDBC(points=points, space=plane)     # V
     stable = False
 
     while stable is False:
-        voronoi = compute_voronoi_tesselation(points)
+        voronoi.create_voronoi()
         stable = True
         areas = list(range(len(points)))
         for i, a_i in enumerate(areas):
-            a_i = area_size(cells(i, voronoi)) / area_size(plane)
-            if abs(a_i - desiried_areas[i]) > epsilon:
+            a_i = voronoi[i].area / plane.area
+            if abs(a_i - desired_areas[i]) > epsilon:
                 stable = False
 
         for i, w in enumerate(weights):
             # adjust the wieghts
-            weights[i] = adjust_weights_pw(w, areas[i], desiried_areas[i])
+            weights[i] = adjust_weights(
+                w, areas[i], desired_areas[i], add=add
+            )
 
         points, weights = move_generators(points, weights, voronoi)
 
-    return extract_subareas(voronoi)
+    return voronoi
 
 

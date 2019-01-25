@@ -6,6 +6,34 @@ from src.discrete import utils as utils
 
 seed = np.random.seed(68)
 
+scen1 = {
+    'pts': [[0.25, 0.25],    # 0
+            [0.4, 0.4],      # 1
+            [0.73, 0.23],    # 2
+            [0.25, 0.75],    # 3
+            [0.76, 0.76],    # 4
+            ],
+    'adj': [[0, 1], [1, 2], [1, 4], [1, 3], [0, 3],  [0, 2]],
+    'wgt': []
+}
+
+scen2 = {
+    'pts': [[0.25, 0.25],    # 0
+            [0.5, 0.5],      # 1
+            [0.73, 0.23],    # 2
+            [0.25, 0.75],    # 3
+            [0.66, 0.66],    # 4
+            [0.76, 0.76],    # 5
+            ],
+    'adj': [[0, 1], [1, 2], [1, 4], [1, 3], [0, 3],
+            [4, 5], [0, 4]],
+    'wgt': [1, 2, 3, 4, 5, 4]
+}
+
+
+def prep_segment():
+    pass
+
 
 class TestDisc(unittest.TestCase):
     def setUp(self):
@@ -13,16 +41,6 @@ class TestDisc(unittest.TestCase):
         self.inputs = [[0.25, 0.25], [0.5, 0.5], [0.73, 0.23], [0.76, 0.76], [0.242, 0.7422]]
         self.weight = [0.4, 0.1, 0.2, 0.2, 0.2]
         self.weighted = [[x, y, w / 2] for (x, y), w in zip(self.inputs, self.weight)]
-        self.pts = [[0.25, 0.25],    # 0
-                    [0.5, 0.5],      # 1
-                    [0.73, 0.23],    # 2
-                    [0.25, 0.75],    # 3
-                    [0.66, 0.66],    # 4
-                    [0.76, 0.76],    # 5
-                    ]
-        self.adj = [[0, 1], [1, 2], [1, 4], [1, 3], [0, 3],
-                    [4, 5],
-                    ]
 
     def test_autom(self):
         init_loc = [1, 1]
@@ -40,15 +58,25 @@ class TestDisc(unittest.TestCase):
     def test_site(self):
         space = disc.BoundedSpace_Z2(x=100, y=100)
         assert len(space) == 100 * 100
-        assert space.is_filled is False
+        assert space.done is False
         space._data = np.ones((100, 100))
-        assert space.is_filled is True
+        assert space.done is True
+
+    def test_cut1(self):
+        space = disc.BoundedSpace_Z2(x=50, y=50)
+        cutpts1 = np.array([[1, 1], [10, 3], [8, 8]])
+        space.cutout(cutpts1)
+        space.to_image(out='./out/init_test/hole1.jpeg')
+
+    def test_crop(self):
+        space = disc.BoundedSpace_Z2(x=50, y=50)
+        cutpts1 = np.array([[1, 20], [20, 40], [45, 20], [21, 1]])
+        space.crop(cutpts1)
+        space.to_image(out='./out/init_test/crop1.jpeg')
 
     def test_discrete1(self):
         space = disc.BoundedSpace_Z2(x=50, y=50)
-        vor = disc.DiscreteVoronoi(points=self.inputs,
-                                   space=space)
-        # vor.create_voronoi()
+        vor = disc.DiscreteVoronoi(points=self.inputs, space=space)
         for i, cell in enumerate(vor._cells):
             assert cell.index == i + 1
             print(cell)
@@ -85,7 +113,7 @@ class TestDisc(unittest.TestCase):
     def test_discrete_setup(self):
         space = disc.BoundedSpace_Z2(x=100, y=100)
         vor = disc.VoronoiDBC(
-            adj=self.adj, points=self.pts, space=space, verbose=True,
+            adj=scen1['adj'], points=scen1['pts'], space=space, verbose=True,
             stop=100, go=False, bins=3, save=2
         )
         vor._init_cell_sites()
@@ -96,12 +124,67 @@ class TestDisc(unittest.TestCase):
     def test_discrete_sg1(self):
         space = disc.BoundedSpace_Z2(x=100, y=100)
         vor = disc.VoronoiDBC(
-            adj=self.adj, points=self.pts, space=space, verbose=True,
-            stop=100, go=True, bins=3, save=2
+            adj=scen1['adj'],
+            points=scen1['pts'],
+            space=space,
+            verbose=True,
+            stop=100,
+            go=True,
+            bins=3,
+            save=1
         )
 
         for k, edge in vor._edges.items():
             print(k, len(edge))
+
+    def test_discrete_aut8(self):
+        space = disc.BoundedSpace_Z2(x=100, y=100)
+        vor = disc.VoronoiDBC(
+            adj=scen1['adj'],
+            points=scen1['pts'],
+            space=space,
+            verbose=True,
+            stop=100,
+            go=True,
+            bins=3,
+            save=1,
+            aut_class=disc.automota.Automaton8
+        )
+
+        for k, edge in vor._edges.items():
+            print(k, len(edge))
+
+    def test_disc_algo1(self):
+
+        space = disc.BoundedSpace_Z2(x=100, y=100)
+        areas = scen1['wgts']
+        vor = disc.VoronoiDBC(
+            adj=scen1['adj'],
+            points=scen1['pts'],
+            space=space,
+            verbose=True,
+            stop=100,
+            go=False,
+            bins=3,
+            save=1,
+            aut_class=disc.automota.Automaton8
+        )
+
+    def test_disc_nested_algo1(self):
+
+        space = disc.BoundedSpace_Z2(x=100, y=100)
+
+        vor = disc.VoronoiDBC(
+            adj=scen1['adj'],
+            points=scen1['pts'],
+            space=space,
+            verbose=True,
+            stop=100,
+            go=False,
+            bins=3,
+            save=1,
+            aut_class=disc.automota.Automaton8
+        )
 
 
 _inputs = [[0.25, 0.25], [0.25, 0.75], [0.75, 0.75], [0.75, 0.25]]

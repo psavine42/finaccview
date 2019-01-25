@@ -45,10 +45,11 @@ def centroid(points):
         cached. If the polygon is known to be simple, this takes O(n) time. If
         not, then the simple polygon check is also performed, which has an
         expected complexity of O(n log n).
+
+        Compute the centroid using by summing the centroids
+         of triangles made from each edge with vertex[0] weighted
+        (positively or negatively) by each triangle's area
     """
-    # Compute the centroid using by summing the centroids
-    # of triangles made from each edge with vertex[0] weighted
-    # (positively or negatively) by each triangle's area
     a = points[0]
     b = points[1]
     total_area = 0.0
@@ -63,42 +64,8 @@ def centroid(points):
 
 
 def fill_tri(space, p1, p2, p3):
+    # todo
     return space
-
-
-def _discretize_segment(p1, p2):
-    """
-    Bresenham’s Line Algorithm A
-    returns list of digital points on line p1 to p2, including p1, p2
-    """
-    x, y = p1[0], p1[1]
-
-    # edge case of vertical line
-    if (p1[0] - p2[0]) == 0:
-        return [[x, y] for y in range(p1[1], p2[1]+1)]
-
-    k = (p1[1] - p2[1]) / (p1[0] - p2[0])
-    if k < 0:
-        n, err = -1, -0.5
-    else:
-        n, err = 1, 0.5
-
-    marked = [[x, y]]
-    error = 0.
-    # print(n, err, k)
-    while x != p2[0]:
-        x += 1
-        error += k
-        # print(error, err, x, y)
-        if error > err:
-            while error > err:
-                # print(error, x, y)
-                y += n
-                error -= n
-                marked.append([x, y])
-        else:
-            marked.append([x, y])
-    return marked
 
 
 def _line_low(x0, y0, x1, y1):
@@ -142,19 +109,15 @@ def discretize_segment(p1, p2):
     if abs(y1 - y0) < abs(x1 - x0):
         if x0 > x1:
             return _line_low(x1, y1, x0, y0)
-        else:
-            return _line_low(x0, y0, x1, y1)
+        return _line_low(x0, y0, x1, y1)
     else:
         if y0 > y1:
             return _line_high(x1, y1, x0, y0)
-        else:
-            return _line_high(x0, y0, x1, y1)
+        return _line_high(x0, y0, x1, y1)
 
 
 def nearest_points(pts1, pts2):
     """ nearest [n, 2 ] [m, 2] -> [1,2]"""
-    # a1 = np.asarray(pts1)
-    # a2 = np.asarray(pts2)
     if pts1.ndim == 1:
         pts1 = pts1.reshape(1, 2)
     if pts2.ndim == 1:
@@ -162,4 +125,14 @@ def nearest_points(pts1, pts2):
     dists = distance.cdist(pts1, pts2)
     pts = np.unravel_index(np.argmin(dists, axis=None), dists.shape)
     return pts1[pts[0]], pts2[pts[1]]
+
+
+def pointset_mass_distribution(points):
+    cm = np.sum(points, axis=0) / len(points)
+    A = np.asmatrix(np.zeros((2, 2)))
+    for p in points:
+        r = np.asmatrix(p - cm)
+        A += r.transpose()*r
+    # np.asarray(cm).reshape(2),
+    return A
 

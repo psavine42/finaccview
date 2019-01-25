@@ -9,17 +9,31 @@ class Site(object):
                  space=None,
                  ix=None,
                  source=None,
-                 step_every=1):
+                 step_every=1,
+                 aut_klass=Automaton4):
         self._pos = pos
         self.index = ix
         self._space = None
         self._step_every = step_every
         self._matrix = None
         self._chain = []
+        self._aut_klass = aut_klass
         self._step = 0
+        self._color = np.asarray([
+            np.random.randint(40, 255) for _ in range(3)
+        ])
 
     def __len__(self):
         return len(self._chain)
+
+    def reset(self, *pt):
+        self._chain = []
+        self._pos = pt
+        self.init_claimed_list()
+
+    @property
+    def color(self):
+        return self._color
 
     @property
     def area(self):
@@ -37,6 +51,10 @@ class Site(object):
     def pos(self):
         return np.asarray(self._pos)
 
+    @property
+    def weight(self):
+        return self._step_every
+
     def should_step(self, step):
         do_step = step % self._step_every == 0
         return do_step
@@ -46,7 +64,7 @@ class Site(object):
 
     def add_boundary(self, boundary):
         if isinstance(boundary, list):
-            boundary = Automaton4(boundary)
+            boundary = self._aut_klass(boundary)
         self._chain.append(boundary)
 
     @property
@@ -60,9 +78,7 @@ class Site(object):
         unique_nexts = set()
         for automaton in self._chain:
             for next_state in automaton.next_states():
-                if next_state in unique_nexts:
-                    continue
-                if M.is_open(next_state.pos):
+                if M.is_open(next_state.pos) == True:
                     unique_nexts.add(next_state)
         return unique_nexts
 
@@ -89,11 +105,17 @@ class DiscreteSite(Site):
     def area(self):
         return len(np.where(self._parent.M.np == self.index)[0])
 
+    @property
+    def center_of_mass(self):
+        xs, ys = np.where(self._parent.M.np == self.index)
+        pt = utils.pointset_mass_distribution(np.stack([xs, ys], 1))
+        return pt.astype(int)
+
     def distance_to(self, other):
         return (((self.x - other[0]) ** 2) + ((self.y - other[1]) ** 2)) ** 0.5
 
     def init_claimed_list(self):
-        aut = Automaton4(self._pos)
+        aut = self._aut_klass(self._pos)
         self._parent.claim_pixel(self, aut)
         self._chain = [aut]
 
@@ -111,9 +133,9 @@ class SegmentSite(DiscreteSite):
         p1 = self._pos[0:2]
         p2 = self._pos[2:4]
         for pt in utils.discretize_segment(p1, p2):
-            aut = Automaton4(pt)
+            aut = self._aut_klass(pt)
             self._parent.claim_pixel(self, aut)
-            self._chain.append(pt)
+            self._chain.append(aut)
 
 
 class WeightedSite(DiscreteSite):
@@ -128,3 +150,29 @@ class WeightedSite(DiscreteSite):
             do_step = step % self._step_every == 0
             return do_step
         return False
+
+
+class CompositeSite(Site):
+    def __init__(self, *args, **kwargs):
+        Site.__init__(self, *args, **kwargs)
+        self._children = []
+
+    def init_claimed_list(self):
+        for child in self._children:
+            child.init_claimed_list()
+            items = child._chain
+            self._chain.extend(items)
+            child._chain = []
+
+    def update_boundary_chain(self, M):
+        """
+        Top level nesting to handle subsets
+        """
+        unique_nexts = set()
+        for child in self._children:
+            for automaton in child._chain:
+                for next_state in automaton.next_states():
+                    if M.is_open(next_state.pos) == True:
+                        unique_nexts.add(next_state)
+        return unique_nexts
+
